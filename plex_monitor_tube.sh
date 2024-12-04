@@ -1,10 +1,9 @@
 #!/bin/bash
-# v0.4
 
 # Host path to monitor
-HOST_DIR="/mnt/wpool/media_movies"
+HOST_DIR="/mnt/wpool/media_tube"
 # Container path (what Plex sees)
-PLEX_DIR="/mnt/media/movies"
+PLEX_DIR="/mnt/media/tube"
 
 # Log file to store detected file paths
 LOG_FILE="/tmp/monitor_plex_tube.log"
@@ -33,8 +32,11 @@ do
         # Extract the directory path and translate it
         DIR_PATH=$(dirname "$NEW_FILE")
         CONTAINER_PATH=$(translate_path "$DIR_PATH")
+        # Adding timestamp
+        TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S")
         # Log the container path
         echo "$CONTAINER_PATH" >> "$LOG_FILE"
+        echo "$TIMESTAMP" added "$CONTAINER_PATH"
         # Sort and remove duplicates in one go
         sort -u "$LOG_FILE" -o "$LOG_FILE"
     fi
