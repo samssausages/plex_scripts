@@ -1,2 +1,1 @@
-# plex_scripts
-Plex helper scripts
+# Plex helper scripts
