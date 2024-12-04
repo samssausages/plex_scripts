@@ -5,7 +5,7 @@
 2. plex_monitor.sh - Used to query the log file and notify Plex to scan folders found in the log.  Put this script on a CRON shedule.  I.e. every 10 minutes.
 
 Limitations:
-- only handles 1 library at a time.  But you can run more than one script.
+- only handles 1 library at a time.  But you can run more than one script.  I suggest seperate log files, if you do.
 
 Todo:
 - Improve Error Handling
