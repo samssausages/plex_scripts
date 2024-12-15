@@ -10,3 +10,4 @@ Limitations:
 Todo:
 - Improve Error Handling
 - Improve Logging notifications
+- Make more robust.  Currently the script could miss an update if a new file is added between API call, plex confirmation and removing the log entry.  May change this up to use timestamps and then prune the log.  But right now this is pretty rare, so not a high priority for me.
