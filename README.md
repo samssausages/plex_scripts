@@ -6,6 +6,7 @@
 
 Limitations:
 - only handles 1 library at a time.  But you can run more than one script.  I suggest seperate log files, if you do.
+- If you're adding thousands of files, then disable the script until after your bulk add.
 
 Todo:
 - Improve Error Handling
